@@ -1,0 +1,34 @@
+.navbar {
+	//background-color: #ffb2b2;
+	background-color: #282828;
+}
+
+
+.nav-item {
+	a {
+		//color: #ffb2b2;
+		//color: #ff7070;
+		color: #ffb2b2;
+	}
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #282828 !important;
+	color: #ffb2b2;
+	border-top: 0.5px solid #ffb2b2;
+	height: 45px;
+	img {
+		height: 45px;
+		width: auto;
+		opacity: 0.75;
+		float: right;
+	}
+	p {
+		padding-top: 10px;
+		padding-left: 20px;
+	}
+}
