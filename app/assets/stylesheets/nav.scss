@@ -1,6 +1,8 @@
 .navbar {
 	//background-color: #ffb2b2;
-	background-color: #282828;
+	// background-color: #282828;
+	background-color: #726A95;
+	// background-color: #c0b3ff;
 }
 
 
@@ -8,6 +10,7 @@
 	a {
 		//color: #ffb2b2;
 		//color: #ff7070;
+		// color: #ffb2b2;
 		color: #ffb2b2;
 	}
 }
@@ -17,9 +20,13 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: #282828 !important;
+	// background-color: #282828 !important;
+	background-color: #726A95 !important;
+	// background-color: #c0b3ff !important;
 	color: #ffb2b2;
-	border-top: 0.5px solid #ffb2b2;
+	// border-top: 0.5px solid #ffb2b2;
+	border-top: 0.5px solid #726A95;
+	// border-top: 0.5px solid #c0b3ff;
 	height: 45px;
 	img {
 		height: 45px;

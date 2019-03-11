@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	background-color: #726A95 !important;
+	// background-color: #c0b3ff !important;
+	color: #0b0b0f;
+	a {
+		color: #431aff !important;
+	}
+}
+
+.jumbotron {
+	background-color: #f8f7fc;
+	border-radius: 50px;
+}
+
+
+.container {
+	// background-color: #726A95 !important;
+	border-radius: 50px;
+	background-color: #c0b3ff !important;
+}
 
 .wrapper {
 	width: 100%;
@@ -30,6 +50,5 @@
 	img {
 		width: 25%;
 	}
-	
 }
 
