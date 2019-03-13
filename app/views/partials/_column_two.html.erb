@@ -24,30 +24,59 @@
 			<% end %>
 		<% end %>
 		<% @full_t = @full_t.reject{ |e| remove.include? e } %>
+		<% @cp_full_t = @full_t.dup %>
 		<% left, right = @full_t.each_slice((@full_t.size/2.0).round).to_a %>
+		<% left_subL, left_subR = left.each_slice((left.size/2.0).round).to_a %>
+		<% right_subL, right_subR = right.each_slice((right.size/2.0).round).to_a %>
 
-		<div class="row" style="padding-top: 0px; margin-top: 0px;">
-			<div id="parent-div" style="padding-top: 0px; margin-top: 0px;">
-				<div id="child-one-div">
-					<% left.each do |a_name| %>
-						<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
-							<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
-						<% end %>
+		<div class="row">
+			<div class="four">
+				<% left_subL.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
 					<% end %>
-				</div>
+				<% end %>
+			</div>
 
-				<div id="child-two-div">
-					<% right.each do |a_name| %>
-						<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
-							<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
-						<% end %>
+			<div class="four">
+				<% left_subR.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
 					<% end %>
-				</div>
+				<% end %>
+			</div>
+
+			<div class="four">
+				<% right_subL.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+					<% end %>
+				<% end %>
 			</div>
 		</div>
 
+		<!--div class="row" style="padding-top: 0px; margin-top: 0px;">
+			<div id="parent-div" style="padding-top: 0px; margin-top: 0px;">
+				<div id="child-one-div">
+					% left.each do |a_name| %>
+						% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+							<span style="font-size: 16px;">&#8226; %= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+						% end %>
+					% end %>
+				</div>
+
+				<div id="child-two-div">
+					% right.each do |a_name| %>
+						% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+							<span style="font-size: 16px;">&#8226; %= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+						% end %>
+					% end %>
+				</div>
+			</div>
+		</div-->
+
 	</p>
-	<br>
+	<br><br>
 				
 <% end %>
 

@@ -22,10 +22,10 @@
 	</div>
 
 	<div class="row" style="margin: 0 auto; padding-top: 5px;">
-		<div class="col-sm-6">
+		<div class="col-sm-3">
 			<center><h1 style="font-family: cursive;">Technologies</h1></center>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-9">
 			<center><h1 style="font-family: cursive;">Active Projects</h1></center>
 		</div>
 	</div>
@@ -33,11 +33,11 @@
 	<div class="row" style="margin: 0 auto; padding-top: 5px;">
 		<div class="col-sm-3 about-div">
 			<%= render partial: 'partials/column_one', locals: { left: @kv_first_half } %>
-		</div>
-		<div class="col-sm-3 about-div">
+		<!--/div>
+		<div class="col-sm-3 about-div"-->
 			<%= render partial: 'partials/column_three', locals: { right: @kv_second_half } %>
 		</div>
-		<div class="col-sm-6 about-div">
+		<div class="col-sm-9 about-div">
 			<%= render partial: 'partials/column_two', locals: { projects: @projects } %>
 		</div>
 	</div>

@@ -13,13 +13,20 @@
 }
 
 #child-one-div {
-	width: 350px;
+	width: 450px;
 	float: left;
 	height: 100%;
 }
 
 #child-two-div {
-	width: 350px;
-	margin-left: 200px;
+	width: 450px;
+	margin-left: 450px;
 }
 
+.four {
+	float: left;
+	font-family: cursive;
+	vertical-align: top;
+	width: 33%;
+	margin: 0;
+}
