@@ -1,0 +1,13 @@
+
+<% right.each do |tech, proj| %>
+	<% @projects = Project.where(id: proj) %>
+	<p style="text-align: center; font-family: cursive; padding-bottom: 0px; margin-bottom: 0px;">
+		 &#8226; <b><u style="font-size: 18px;"><%= tech.gsub("_"," ").titleize %></u></b> &#8226;
+	</p>
+	<p style="text-align: center; font-family: cursive;">
+		<% @projects.each do |p| %>
+			<%= p.name %> <br>
+		<% end %>
+	</p>
+<% end %>
+

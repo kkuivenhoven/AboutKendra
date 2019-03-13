@@ -1,0 +1,53 @@
+
+<% @all_projects.each do |ap| %>
+
+	<p style="text-align: center; font-family: cursive; padding-bottom: 0px; margin-bottom: 0px;">
+		<b><h4 style="font-family: cursive;">&#8226; <%= ap[1] %> (<%= ap[3] %> app) &#8226;</h4></b>
+	</p>
+
+	<p style="text-align: center; font-family: cursive; padding-top: 0px; margin-top: 0px;">
+		<%= ap[2] %> 
+			The existing code is here: <a href=<%= ap[4] %>><%= ap[1] + " " + ap[3] %> (repo)</a>.&nbsp;
+			The web app is hosted <a href=<%= ap[5] %>>here</a>.
+	</p>
+
+	<p style="font-family: cursive; font-size: 18px;">
+		<b>Technologies used:</b><br>
+		<% @t = Tech.where(:project_id => ap[0]).first %>
+		<% @full_t = @t.attribute_names %>
+		<% stopCol = ["id","created_at","updated_at", "project_id"] %>
+		<% @full_t = @full_t.reject{ |e| stopCol.include? e } %>
+		<% remove = [] %>
+		<% @full_t.each do |name| %>
+			<% if Tech.where("project_id = ?", ap[0]).pluck("#{name}").first == false %>	
+				<% remove << name %>
+			<% end %>
+		<% end %>
+		<% @full_t = @full_t.reject{ |e| remove.include? e } %>
+		<% left, right = @full_t.each_slice((@full_t.size/2.0).round).to_a %>
+
+		<div class="row" style="padding-top: 0px; margin-top: 0px;">
+			<div id="parent-div" style="padding-top: 0px; margin-top: 0px;">
+				<div id="child-one-div">
+					<% left.each do |a_name| %>
+						<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+							<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+						<% end %>
+					<% end %>
+				</div>
+
+				<div id="child-two-div">
+					<% right.each do |a_name| %>
+						<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+							<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+
+	</p>
+	<br>
+				
+<% end %>
+

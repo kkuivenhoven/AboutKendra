@@ -8,11 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
+<% if current_page?(controller: 'basic', action: 'about') %>
+
+			<%= yield %>
+
+<% else %>
+
  <nav class="navbar navbar-default navbar-expand-sm">
 		&nbsp;
 	</nav>
-
 <body>
+
 	<div class="container">
 		<br>
 		<div class="jumbotron">	
@@ -229,3 +236,5 @@
 	</div>
 
 </html>
+
+<% end %>

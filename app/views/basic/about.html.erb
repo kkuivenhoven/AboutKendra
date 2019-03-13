@@ -1,0 +1,46 @@
+
+<div class="container" style="margin: 0 auto;">
+	<div class="row" style="margin: 0 auto;">
+		<div class="col-sm-12" style="text-align: center; padding-top: 25px;">
+			<%= @name %>
+
+			<p><%= @resume %> | <%= @linked_in %> | <%= @github %> | <%= @stackoverflow %></p>
+
+			<%= @email %>
+		</div>
+	</div>
+
+	<div class="row" style="margin: 0 auto; height: 250px; padding-top: 5px; padding-bottom: 5px;">
+		<div class="col-sm-3">
+			<img width="200px" height="auto;" src="http://i68.tinypic.com/21sfpt.jpg" alt="http://i68.tinypic.com/21sfpt.jpg" class="img-thumbnail" style=""></img>
+		</div>
+		<div class="col-sm-9">
+			<%= @seeking %>
+			<br><br>
+			<%= @portfolio + @challenge %>
+		</div>
+	</div>
+
+	<div class="row" style="margin: 0 auto; padding-top: 5px;">
+		<div class="col-sm-6">
+			<center><h1 style="font-family: cursive;">Technologies</h1></center>
+		</div>
+		<div class="col-sm-6">
+			<center><h1 style="font-family: cursive;">Active Projects</h1></center>
+		</div>
+	</div>
+
+	<div class="row" style="margin: 0 auto; padding-top: 5px;">
+		<div class="col-sm-3 about-div">
+			<%= render partial: 'partials/column_one', locals: { left: @kv_first_half } %>
+		</div>
+		<div class="col-sm-3 about-div">
+			<%= render partial: 'partials/column_three', locals: { right: @kv_second_half } %>
+		</div>
+		<div class="col-sm-6 about-div">
+			<%= render partial: 'partials/column_two', locals: { projects: @projects } %>
+		</div>
+	</div>
+</div>
+
+
