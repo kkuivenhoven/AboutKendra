@@ -16,6 +16,7 @@ class BasicController < ApplicationController
 		@linked_in = "<a href='https://www.linkedin.com/in/kendra-kuivenhoven-4a898237/'>Linked In</a>".html_safe
 		@github = "<a href='www.github.com/kkuivenhoven'>GitHub</a>".html_safe
 		@stackoverflow = "<a href='https://stackoverflow.com/users/story/5479897'>Stackoverflow</a>".html_safe
+		@gem_profile = "<a href='https://rubygems.org/profiles/kendrakvnhvn10'>Published Gems</a>".html_safe
 		@greeting = "Welcome and enjoy!"
   end
 
