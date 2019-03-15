@@ -16,6 +16,7 @@ namespace :import_csv do
 			project.description = row['description']
 			project.year = row['year']
 			project.month = row['month']
+			project.still_active = row['still_active']
 			project.save
 		end
   end
