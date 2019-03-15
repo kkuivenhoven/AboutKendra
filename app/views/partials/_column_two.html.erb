@@ -14,8 +14,8 @@
 	<p style="font-family: cursive; font-size: 18px;">
 		<b>Technologies used:</b><br>
 		<% @t = Tech.where(:project_id => ap[0]).first %>
-		<!--% @full_t = @t.attribute_names %>
-		% stopCol = ["id","created_at","updated_at", "project_id"] %>
+		<% @full_t = @t.attribute_names %>
+		<!--% stopCol = ["id","created_at","updated_at", "project_id"] %>
 		% @full_t = @full_t.reject{ |e| stopCol.include? e } %>
 		% remove = [] %>
 		% @full_t.each do |name| %>
