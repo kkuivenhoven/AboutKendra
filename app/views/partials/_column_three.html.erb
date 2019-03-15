@@ -1,17 +1,17 @@
-<% fromPresent = true %>
+<!--% fromPresent = true %-->
 <% right.each do |tech, proj| %>
   <% @projects = Project.where(id: proj) %>
-  <% @years = Array.new %>
-  <% @projects.each do |p| %>
-    <% if p.still_active == true %>
-      <% fromPresent = true %>
-    <% else %>
-      <% fromPresent = false %>
-    <% end %>
-    <% @years << p.year %>
-  <% end %>
-  <% smallest, largest = @years.select{ |x| x }.minmax_by(&:to_i) %>
-  <% cur_year = DateTime.now.year.to_i %>
+  <!--% @years = Array.new %>
+  % @projects.each do |p| %>
+    % if p.still_active == true %>
+      % fromPresent = true %>
+    % else %>
+      % fromPresent = false %>
+    % end %>
+    % @years << p.year %>
+  % end %>
+  % smallest, largest = @years.select{ |x| x }.minmax_by(&:to_i) %>
+  % cur_year = DateTime.now.year.to_i %-->
   <p style="text-align: center; font-family: cursive; padding-bottom: 0px; margin-bottom: 0px;">
 				&#8226; 
 				<b><u><span style="font-size: 18px;"><%= tech.gsub("_"," ").titleize %></span></u></b>
