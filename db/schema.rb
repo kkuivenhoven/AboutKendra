@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190313173738) do
+ActiveRecord::Schema.define(version: 20190315230239) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -20,6 +20,9 @@ ActiveRecord::Schema.define(version: 20190313173738) do
     t.datetime "updated_at",    null: false
     t.string   "github_repo"
     t.string   "prod_site"
+    t.integer  "year"
+    t.integer  "month"
+    t.boolean  "still_active"
   end
 
   create_table "teches", force: :cascade do |t|

@@ -14,6 +14,8 @@ namespace :import_csv do
 			project.github_repo = row['github_repo']
 			project.prod_site = row['prod_site']
 			project.description = row['description']
+			project.year = row['year']
+			project.month = row['month']
 			project.save
 		end
   end
