@@ -4,7 +4,8 @@ class BasicController < ApplicationController
   end
 
   def about
-		@all_projects = Project.all.pluck(:id, :name, :description, :platform_type, :github_repo, :prod_site, :year, :month, :platform_type)
+		# @all_projects = Project.all.pluck(:id, :name, :description, :platform_type, :github_repo, :prod_site, :year, :month, :platform_type)
+		@all_projects = Project.all.pluck(:id, :name, :description, :platform_type, :github_repo, :prod_site)
 		@kv_first_half, @kv_second_half = Tech.splitTotalTechCount
 
 		@name = "<h1>Kendra Kuivenhoven</h1>".html_safe
