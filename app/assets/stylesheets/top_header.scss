@@ -4,26 +4,50 @@
 	padding-top: 25px;
 }
 
-#sub-intro {
-	margin: 0 auto;
-	height: 300px;
-	padding-top: 5px;
-	padding-bottom: 25px;
-}
-
 #badge-info {
 	padding-left: 25px;
 	text-align: right;
 }
 
-.badge-title {
-	font-family: cursive;
-	font-size: 18px;
-	font-weight: bold;
+@media screen and (min-width: 600px) {
+	#sub-intro {
+		margin: 0 auto;
+		height: 300px;
+		padding-top: 5px;
+		padding-bottom: 25px;
+	}
+	.lib-info {
+		font-size: 12px;
+	}
+	.badge-title {
+		font-family: cursive;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	.badge-lib-ref {
+		font-size: 13px;
+	}
 }
 
-.badge-lib-ref {
-	font-size: 13px;
+@media screen and (max-width: 600px) {
+	#sub-intro {
+		font-size: 12px;
+		margin: 0 auto;
+		height: 300px;
+		padding-top: 5px;
+		padding-bottom: 150px;
+		margin-bottom: 150px;
+	}
+	.lib-info {
+		font-size: 8px;
+	}
+	.badge-title {
+		font-family: cursive;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.badge-lib-ref {
+		font-size: 9px;
+	}
 }
-
 
