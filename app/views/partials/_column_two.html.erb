@@ -16,44 +16,44 @@
 		<% @t = Tech.where(project_id: ap[0]) %>
 		<% @full_t = @t.attribute_names %>
 		<% stopCol = ["id","created_at","updated_at", "project_id"] %>
-		<!--% @full_t = @full_t.reject{ |e| stopCol.include? e } %>
-		% remove = [] %>
-		% @full_t.each do |name| %>
-			% if Tech.where("project_id = ?", ap[0]).pluck("#{name}").first == false %>	
-				% remove << name %>
-			% end %>
-		% end %>
-		% @full_t = @full_t.reject{ |e| remove.include? e } %>
-		% @cp_full_t = @full_t.dup %>
-		% left, right = @full_t.each_slice((@full_t.size/2.0).round).to_a %>
-		% left_subL, left_subR = left.each_slice((left.size/2.0).round).to_a %>
-		% right_subL, right_subR = right.each_slice((right.size/2.0).round).to_a %>
+		<% @full_t = @full_t.reject{ |e| stopCol.include? e } %>
+		<% remove = [] %>
+		<% @full_t.each do |name| %>
+			<% if Tech.where("project_id = ?", ap[0]).pluck("#{name}").first == false %>	
+				<% remove << name %>
+			<% end %>
+		<% end %>
+		<% @full_t = @full_t.reject{ |e| remove.include? e } %>
+		<% @cp_full_t = @full_t.dup %>
+		<% left, right = @full_t.each_slice((@full_t.size/2.0).round).to_a %>
+		<% left_subL, left_subR = left.each_slice((left.size/2.0).round).to_a %>
+		<% right_subL, right_subR = right.each_slice((right.size/2.0).round).to_a %>
 
 		<div class="row">
 			<div class="four">
-				% left_subL.each do |a_name| %>
-					% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
-						<span style="font-size: 16px;">&#8226; %= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
-					% end %>
-				% end %>
+				<% left_subL.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+					<% end %>
+				<% end %>
 			</div>
 
 			<div class="four">
-				% left_subR.each do |a_name| %>
-					% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
-						<span style="font-size: 16px;">&#8226; %= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
-					% end %>
-				% end %>
+				<% left_subR.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+					<% end %>
+				<% end %>
 			</div>
 
 			<div class="four">
-				% right_subL.each do |a_name| %>
-					% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
-						<span style="font-size: 16px;">&#8226; %= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
-					% end %>
-				% end %>
+				<% right_subL.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+					<% end %>
+				<% end %>
 			</div>
-		</div-->
+		</div>
 
 		<!--div class="row" style="padding-top: 0px; margin-top: 0px;">
 			<div id="parent-div" style="padding-top: 0px; margin-top: 0px;">
