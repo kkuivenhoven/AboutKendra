@@ -10,33 +10,30 @@
     <% end %>
     <% @years << p.year %>
   <% end %>
-  <% smallest, largest = @years.select{ |x| x }.minmax_by(&:to_i) %>
-  <% cur_year = DateTime.now.year.to_i %>
+  <% @smallest, @largest = @years.select{ |x| x }.minmax_by(&:to_i) %>
+  <% @cur_year = DateTime.now.year.to_i %>
   <p style="text-align: center; font-family: cursive; padding-bottom: 0px; margin-bottom: 0px;">
-				&#8226; 
-				<b><u><span style="font-size: 18px;"><%= tech.gsub("_"," ").titleize %></span></u></b>
-				&#8226; 
       <% if fromPresent == true %>
         &#8226; 
-        <b><u><span style="font-size: 18px;"><%= tech.gsub("_"," ").titleize %></span>
-        <% if (cur_year - smallest) == 1 %>
-          (<span style="font-size: 14px;">1 years</span>)
+        <b><u><span style="font-size: 17px;"><%= tech.gsub("_"," ").titleize %></span>
+        <% if (@cur_year - @smallest) == (0 or 1) %>
+          (<span style="font-size: 14px;">1 year</span>)
         <% else %>
-          (<span style="font-size: 14px;"><%= cur_year - smallest %> years</span>)
+          (<span style="font-size: 14px;"><%= @cur_year - @smallest %> years</span>)
         <% end %>
         </u></b>&#8226; 
       <% else %>
         &#8226; 
-        <b><u><span style="font-size: 18px;"><%= tech.gsub("_"," ").titleize %></span>
-        <% if (largest - smallest) == 0 %>
-          (<span style="font-size: 14px;">1 years</span>)
+        <b><u><span style="font-size: 17px;"><%= tech.gsub("_"," ").titleize %></span>
+        <% if (@largest - @smallest) == (0 or 1) %>
+          (<span style="font-size: 14px;">1 year</span>)
         <% else %>
-          (<span style="font-size: 14px;"><%= largest - smallest %> years</span>)
+          (<span style="font-size: 14px;"><%= @largest - @smallest %> years</span>)
         <% end %>
         </u></b>&#8226; 
       <% end %>
   </p>
-  <p style="text-align: center; font-family: cursive;">
+  <p style="text-align: center; font-size: 15px;">
   <% @projects.each do |p| %>
     <%= p.name %> <br>
   <% end %>

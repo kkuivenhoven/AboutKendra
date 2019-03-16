@@ -10,14 +10,31 @@
 		</div>
 	</div>
 
-	<div class="row" style="margin: 0 auto; height: 250px; padding-top: 5px; padding-bottom: 5px;">
+	<div class="row" style="margin: 0 auto; height: 300px; padding-top: 5px; padding-bottom: 5px;">
 		<div class="col-sm-3">
 			<img width="200px" height="auto;" src="http://i68.tinypic.com/21sfpt.jpg" alt="http://i68.tinypic.com/21sfpt.jpg" class="img-thumbnail" style=""></img>
 		</div>
-		<div class="col-sm-9">
+		<div class="col-sm-6">
 			<%= @seeking %>
 			<br><br>
 			<%= @portfolio + @challenge %>
+		</div>
+		<div class="col-sm-3" style="padding-left: 25px; text-align: right;">
+			<div class="row">
+				<!--h5 style="font-family: cursive;">Published Ruby Libraries</h5-->
+				<p style="font-size: 14px;">
+					<span style="font-family: cursive; font-size: 16px;">Verse Count</span> (<span style="font-family: cursive; font-size: 12px;">a published Ruby library</span>):<br><a href="https://badge.fury.io/rb/verse_count"><img src="https://badge.fury.io/rb/verse_count.svg" alt="Verse Count" height="18"></a><br>
+					<span style="font-size: 12px;">
+						Returns total verse count for each chapter of the Bible. May obtain verse count by book or by book and chapter.
+					</span>
+				</p>
+				<p style="font-size: 14px;">
+					<span style="font-family: cursive; font-size: 16px;">Proverbs NIV</span> (<span style="font-family: cursive; font-size: 12px;">a published Ruby library</span>):<br><a href="https://badge.fury.io/rb/proverbs_niv"><img src="https://badge.fury.io/rb/proverbs_niv.svg" alt="Proverbs NIV" height="18"></a><br>
+					<span style="font-size: 12px;">
+					A wrapper for Word Recurrence API endpoint. Contains functionality for obtaining the entire books of proverbs and individual chapters. 
+					</span>
+				</p>
+			</div>
 		</div>
 	</div>
 
