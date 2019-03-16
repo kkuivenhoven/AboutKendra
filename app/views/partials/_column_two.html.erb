@@ -28,6 +28,7 @@
 		<% left, right = @full_t.each_slice((@full_t.size/2.0).round).to_a %>
 		<% left_subL, left_subR = left.each_slice((left.size/2.0).round).to_a %>
 		<% right_subL, right_subR = right.each_slice((right.size/2.0).round).to_a %>
+		<% rr_sub = (right - right_subL) %>
 
 		<div class="row">
 			<div class="four">
@@ -48,6 +49,14 @@
 
 			<div class="four">
 				<% right_subL.each do |a_name| %>
+					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
+						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
+					<% end %>
+				<% end %>
+			</div>
+
+			<div class="four">
+				<% rr_sub.each do |a_name| %>
 					<% if Tech.where("project_id = ?", ap[0]).pluck("#{a_name}").first == true %>	
 						<span style="font-size: 16px;">&#8226; <%= a_name.gsub("_"," ").titleize %> &#8226;</span><br>
 					<% end %>
