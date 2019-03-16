@@ -16,6 +16,7 @@
 		<% if ap[0].nil? %>
 			<% byebug %>
 		<% else %>
+			<%= ap[0] %>
 			<% @t = Tech.where(:project_id => ap[0]).first %>
 		<% end %>
 		<!--% @full_t = @t.attribute_names %>
