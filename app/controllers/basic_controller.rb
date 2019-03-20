@@ -14,7 +14,7 @@ class BasicController < ApplicationController
 		@challenge = "I like the challenge of learning a new language. If your company works with a language that is not on my resume, I am ready to work until I know it. "
 		@resume = "<a href='https://docs.google.com/document/d/1hWh5acj5OFcYbxT26l2BewyVcgwnASD_RIBMRfC3Hqk/edit?usp=sharing'>Resume</a>".html_safe
 		@linked_in = "<a href='https://www.linkedin.com/in/kendra-kuivenhoven-4a898237/'>Linked In</a>".html_safe
-		@github = "<a href='www.github.com/kkuivenhoven'>GitHub</a>".html_safe
+		@github = "<a href='https://github.com/kkuivenhoven'>GitHub</a>".html_safe
 		@stackoverflow = "<a href='https://stackoverflow.com/users/story/5479897'>Stackoverflow</a>".html_safe
 		@gem_profile = "<a href='https://rubygems.org/profiles/kendrakvnhvn10'>Published Gems</a>".html_safe
 		@greeting = "Welcome and enjoy!"
