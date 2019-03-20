@@ -7,7 +7,9 @@
 #badge-info {
 	padding-left: 25px;
 	text-align: right;
+	color: #2a2b2b;
 }
+
 
 @media screen and (min-width: 600px) {
 	#sub-intro {
@@ -23,6 +25,9 @@
 		font-family: cursive;
 		font-size: 18px;
 		font-weight: bold;
+		.badge-link {
+			color: black;
+		}
 	}
 	.badge-lib-ref {
 		font-size: 11px;
