@@ -16,20 +16,20 @@
       <% if fromPresent == true %>
         &#8226; 
         <b><u><span style="font-size: 17px;"><%= tech.gsub("_"," ").titleize %></span>
-        <% if (@cur_year - @smallest) == (0 or 1) %>
+        <!--% if (@cur_year - @smallest) == (0 or 1) %>
           (<span style="font-size: 14px;">1 year</span>)
-        <% else %>
-          (<span style="font-size: 14px;"><%= @cur_year - @smallest %> years</span>)
-        <% end %>
+        % else %>
+          (<span style="font-size: 14px;">%= @cur_year - @smallest %> years</span>)
+        % end %-->
         </u></b>&#8226; 
       <% else %>
         &#8226; 
         <b><u><span style="font-size: 17px;"><%= tech.gsub("_"," ").titleize %></span>
-        <% if (@largest - @smallest) == (0 or 1) %>
+        <!--% if (@largest - @smallest) == (0 or 1) %>
           (<span style="font-size: 14px;">1 year</span>)
-        <% else %>
-          (<span style="font-size: 14px;"><%= @largest - @smallest %> years</span>)
-        <% end %>
+        % else %>
+          (<span style="font-size: 14px;">%= @largest - @smallest %> years</span>)
+        % end %-->
         </u></b>&#8226; 
       <% end %>
   </p>
