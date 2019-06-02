@@ -9,9 +9,11 @@ class BasicController < ApplicationController
 
 		@name = "<h1>Kendra Kuivenhoven</h1>".html_safe
 		@email = "<p>kendrakvnhvn10@gmail.com</p>".html_safe
-		@seeking = "I am seeking a technical position in software development, full-stack or front end and/or back end. I am open to a quality assurance analyst position as well. I am also available to tutor high school Mathematics (up to Calculus 1) or Statistics. "
+		# @seeking = "I am seeking a technical position in software development, full-stack or front end and/or back end. I am open to a quality assurance analyst position as well. I am also available to tutor high school Mathematics (up to Calculus 1) or Statistics. "
+		@seeking = ""
 		@portfolio = "My portfolio is below with links to my projects. Developing web and mobile apps is one of my passions, so I am always creating something new. "
-		@challenge = "I like the challenge of learning a new language. If your company works with a language that is not on my resume, I am ready to work until I know it. "
+		# @challenge = "I like the challenge of learning a new language. If your company works with a language that is not on my resume, I am ready to work until I know it. "
+		@challenge = "I like the challenge of learning a new language. I find it rewarding."
 		@resume = "<a href='https://docs.google.com/document/d/1hWh5acj5OFcYbxT26l2BewyVcgwnASD_RIBMRfC3Hqk/edit?usp=sharing'>Resume</a>".html_safe
 		@linked_in = "<a href='https://www.linkedin.com/in/kendra-kuivenhoven-4a898237/'>Linked In</a>".html_safe
 		@github = "<a href='https://github.com/kkuivenhoven'>GitHub</a>".html_safe
