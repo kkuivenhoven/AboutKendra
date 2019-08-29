@@ -8,7 +8,9 @@
 	<p style="text-align: left; padding-top: 0px; margin-top: 0px;">
 		<%= ap[2] %> 
 			The existing code is here: <a href=<%= ap[4] %>><%= ap[1] + " " + ap[3] %> (repo)</a>.&nbsp;
-			The web app is hosted <a href=<%= ap[5] %>>here</a>.
+			<% if ap[5].length > 0 %>
+				The web app is hosted <a href=<%= ap[5] %>>here</a>.
+			<% end %>
 	</p>
 
 	<p style="font-family: cursive; font-size: 18px;">
