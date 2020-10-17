@@ -5,3 +5,4 @@ proj_id,bible_gateway,bootstrap,css,csv,d3_js,google_maps,javascript,json,oxford
 4,false,true,true,true,true,false,true,true,false,false,false,false,true,true,true,false,false,true
 5,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false
 6,false,true,true,false,false,false,true,false,false,false,false,false,true,true,true,false,false,true
+7,false,true,true,false,false,false,true,false,false,false,false,false,true,true,true,false,false,true
