@@ -54,15 +54,47 @@
 		</div>
 	</div>
 
+	<% @firstProjects = Array.new %>
+	<% @firstProjects << @all_projects[0] %>
+	<% @lastProjects = Array.new %>
+	<% @all_projects.each_with_index do |project, index| %>
+		<% if index > 0 %>
+			<% @lastProjects << project %>
+		<% end %>
+	<% end %>
+<% byebug %>
+
 	<div class="row" style="margin: 0 auto; padding-top: 5px;">
 		<div class="col-sm-3 about-div">
 			<%= render partial: 'partials/column_one', locals: { left: @kv_first_half } %>
 			<%= render partial: 'partials/column_three', locals: { right: @kv_second_half } %>
 		</div>
+
 		<div class="col-sm-9 about-div">
-			<%= render partial: 'partials/column_two', locals: { projects: @projects } %>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<%= render partial: 'partials/column_two', locals: { projects: @firstProjects } %>
+				</div>
+				<div class="col-sm-3">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a nisi felis. Aenean congue tincidunt quam quis malesuada. Fusce tincidunt risus massa, ultricies cursus mi dignissim id. Nam ut ullamcorper sapien. Sed non neque gravida, porta justo eu, dictum purus. Aliquam in metus felis. 
+				</div>
+			</div>
+				<%= render partial: 'partials/column_two', locals: { projects: @lastProjects } %>
 		</div>
+
 	</div>
+
+	<!--div class="row" style="margin: 0 auto; padding-top: 5px;">
+		<div class="col-sm-3 about-div">
+			%= render partial: 'partials/column_one', locals: { left: @kv_first_half } %>
+			%= render partial: 'partials/column_three', locals: { right: @kv_second_half } %>
+		</div>
+		<div class="col-sm-9 about-div">
+			%= render partial: 'partials/column_two', locals: { projects: @projects } %>
+		</div>
+	</div-->
+
 </div>
 
 
