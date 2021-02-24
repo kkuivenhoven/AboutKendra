@@ -1,3 +1,8 @@
+<style>
+	.container {
+		max-width: 1270px;
+	}
+</style>
 
 <div class="container" style="margin: 0 auto;">
 	<div class="row" style="margin: 0 auto;">
@@ -46,11 +51,14 @@
 	</div>
 
 	<div class="row" style="margin: 0 auto; padding-top: 5px;">
-		<div class="col-sm-3" style="padding-top: 100px;">
+		<div class="col-sm-2" style="padding-top: 100px;">
 			<center><h1 style="font-family: cursive;">Technologies</h1></center>
 		</div>
-		<div class="col-sm-9" style="padding-top: 100px;">
+		<div class="col-sm-7" style="padding-top: 100px;">
 			<center><h1 style="font-family: cursive;">Active Projects</h1></center>
+		</div>
+		<div class="col-sm-3" style="padding-top: 100px;">
+			<center><h1 style="font-family: cursive;">Tutoring</h1></center>
 		</div>
 	</div>
 
@@ -64,19 +72,21 @@
 	<% end %>
 
 	<div class="row" style="margin: 0 auto; padding-top: 5px;">
-		<div class="col-sm-3 about-div">
+		<div class="col-sm-2 about-div">
 			<%= render partial: 'partials/column_one', locals: { left: @kv_first_half } %>
 			<%= render partial: 'partials/column_three', locals: { right: @kv_second_half } %>
 		</div>
 
-		<div class="col-sm-9 about-div">
+		<div class="col-sm-10 about-div">
 
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-8">
 					<%= render partial: 'partials/column_two', locals: { projects: @firstProjects } %>
 				</div>
-				<div class="col-sm-3">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a nisi felis. Aenean congue tincidunt quam quis malesuada. Fusce tincidunt risus massa, ultricies cursus mi dignissim id. Nam ut ullamcorper sapien. Sed non neque gravida, porta justo eu, dictum purus. Aliquam in metus felis. 
+				<div class="col-sm-2">
+					<center>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a nisi felis. Aenean congue tincidunt quam quis malesuada. Fusce tincidunt risus massa, ultricies cursus mi dignissim id. Nam ut ullamcorper sapien. Sed non neque gravida, porta justo eu, dictum purus. Aliquam in metus felis. 
+					</center>
 				</div>
 			</div>
 				<%= render partial: 'partials/column_two', locals: { projects: @lastProjects } %>
