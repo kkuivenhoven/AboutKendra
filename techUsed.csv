@@ -1,8 +1,9 @@
-proj_id,bible_gateway,bootstrap,css,csv,d3_js,google_maps,javascript,json,oxford,pearson,r_spec,react_native,ruby,ruby_on_rails,scss,zing_charts,firebase,html
-1,false,true,true,true,false,false,true,true,true,true,true,false,true,true,true,true,false,true
-2,false,true,true,false,false,true,true,false,false,false,true,false,true,true,true,false,false,true
-3,true,true,true,true,true,false,true,true,false,false,false,false,true,true,true,false,false,true
-4,false,true,true,true,true,false,true,true,false,false,false,false,true,true,true,false,false,true
-5,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false
-6,false,true,true,false,false,false,true,false,false,false,false,false,true,true,true,false,false,true
-7,false,true,true,false,false,false,true,false,false,false,false,false,true,true,true,false,false,true
+proj_id,bible_gateway,bootstrap,css,csv,d3_js,google_maps,javascript,json,oxford,pearson,r_spec,react_native,ruby,ruby_on_rails,scss,zing_charts,firebase,html,c_plus_plus,qt_creator
+1,false,true,true,false,false,false,true,false,false,false,false,false,true,true,true,false,false,true,false,false
+2,false,true,true,true,false,false,true,true,true,true,true,false,true,true,true,true,false,true,false,false
+3,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true,true
+4,false,true,true,false,false,true,true,false,false,false,true,false,true,true,true,false,false,true,false,false
+5,true,true,true,true,true,false,true,true,false,false,false,false,true,true,true,false,false,true,false,false
+6,false,true,true,true,true,false,true,true,false,false,false,false,true,true,true,false,false,true,false,false
+7,false,false,false,false,false,false,true,false,false,false,false,true,false,false,false,false,true,false,false,false
+8,false,true,true,false,false,false,true,false,false,false,false,false,true,true,true,false,false,true,false,false

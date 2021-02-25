@@ -47,6 +47,8 @@ namespace :import_csv do
 			tech.zing_charts_api = row['zing_charts']
 			tech.firebase = row['firebase']
 			tech.html = row['html']
+			tech.c_plus_plus = row['c_plus_plus']
+			tech.qt_creator = row['qt_creator']
 			tech.save
 		end
 	end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190315230239) do
+ActiveRecord::Schema.define(version: 20210224205632) do
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20190315230239) do
     t.boolean  "bible_gateway_api"
     t.boolean  "react_native"
     t.boolean  "firebase"
+    t.boolean  "c_plus_plus"
+    t.boolean  "qt_creator"
   end
 
 end
