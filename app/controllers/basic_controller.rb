@@ -30,8 +30,8 @@ class BasicController < ApplicationController
 			currentViews = @guest.views
 			currentViews += 1
 			@guest.update(ip_addr: request.remote_ip, :views => currentViews)
-		end
 =end
+		end
   end
 
 end
