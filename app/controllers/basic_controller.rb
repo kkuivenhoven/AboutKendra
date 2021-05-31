@@ -22,10 +22,10 @@ class BasicController < ApplicationController
 		@greeting = "Welcome and enjoy!"
 
 		@guests = Guest.all
-=begin
 		if @guests.count == 0
-			@guest = Guest.create(ip_addr: request.remote_ip, views: 1)
+			# @guest = Guest.create(ip_addr: request.remote_ip, views: 1)
 		else
+=begin
 			@guest = Guest.find_by(ip_addr: request.remote_ip)
 			currentViews = @guest.views
 			currentViews += 1
