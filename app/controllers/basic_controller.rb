@@ -25,7 +25,7 @@ class BasicController < ApplicationController
 		if @guests.count == 0
 			@guest = Guest.create(ip_addr: request.remote_ip, views: 1)
 		else
-			@guest = Guest.find_by(ip_addr: request.remote_ip)
+			@guest = Guest.where(ip_addr: request.remote_ip)
 			currentViews = @guest.views
 =begin
 			currentViews += 1
