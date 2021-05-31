@@ -20,6 +20,16 @@ class BasicController < ApplicationController
 		@stackoverflow = "<a href='https://stackoverflow.com/users/story/5479897'>Stackoverflow</a>".html_safe
 		@gem_profile = "<a href='https://rubygems.org/profiles/kendrakvnhvn10'>Published Gems</a>".html_safe
 		@greeting = "Welcome and enjoy!"
+
+		@guests = Guest.all
+		if @guests.count == 0
+			@guest = Guest.create(ip_addr: request.remote_ip, views: 0)
+		else
+			@guest = Guest.find_by(ip_addr: request.remote_ip)
+			currentViews = @guest.views
+			currentViews += 1
+			@guest.update(ip_addr: request.remote_ip, :views => currentViews)
+		end
   end
 
 end

@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210307022231) do
+ActiveRecord::Schema.define(version: 20210530041250) do
+
+  create_table "guests", force: :cascade do |t|
+    t.string   "ip_addr"
+    t.integer  "views"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
