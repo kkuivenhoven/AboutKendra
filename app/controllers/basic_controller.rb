@@ -26,11 +26,9 @@ class BasicController < ApplicationController
 			@guest = Guest.create(ip_addr: request.remote_ip, views: 1)
 		else
 			@guest = Guest.where(ip_addr: request.remote_ip)
-			currentViews = @guest.views
-=begin
+			currentViews = @guest.first.views
 			currentViews += 1
-			@guest.update(ip_addr: request.remote_ip, :views => currentViews)
-=end
+			@guest.first.update(ip_addr: request.remote_ip, :views => currentViews)
 		end
   end
 
