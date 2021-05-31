@@ -23,11 +23,11 @@ class BasicController < ApplicationController
 
 		@guests = Guest.all
 		if @guests.count == 0
-			# @guest = Guest.create(ip_addr: request.remote_ip, views: 1)
+			@guest = Guest.create(ip_addr: request.remote_ip, views: 1)
 		else
-=begin
 			@guest = Guest.find_by(ip_addr: request.remote_ip)
 			currentViews = @guest.views
+=begin
 			currentViews += 1
 			@guest.update(ip_addr: request.remote_ip, :views => currentViews)
 =end
