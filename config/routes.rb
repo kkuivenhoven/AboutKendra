@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'guests/index'
+
   # root controller: :basic, action: :home 
   root controller: :basic, action: :about 
 	

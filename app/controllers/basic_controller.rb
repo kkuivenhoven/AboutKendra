@@ -31,7 +31,6 @@ class BasicController < ApplicationController
 			else
 				currentViews = @guest.first.views
 				currentViews += 1
-				# @guest.first.update(ip_addr: request.remote_ip, :views => currentViews)
 				Guest.update(@guest.first.id, :ip_addr => request.remote_ip, :views => currentViews)
 			end
 		end

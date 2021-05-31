@@ -10,9 +10,9 @@
 
 
 <% if current_page?(controller: 'basic', action: 'about') %>
-
 			<%= yield %>
-
+<% elsif current_page?(controller: 'guests', action: 'index') %>
+			<%= yield %>
 <% else %>
 
  <nav class="navbar navbar-default navbar-expand-sm">
