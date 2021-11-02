@@ -50,6 +50,7 @@ namespace :import_csv do
 			tech.c_plus_plus = row['c_plus_plus']
 			tech.qt_creator = row['qt_creator']
 			tech.qt = row['qt']
+			tech.qwidget = row['qwidget']
 			tech.save
 		end
 	end

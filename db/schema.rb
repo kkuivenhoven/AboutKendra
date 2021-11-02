@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210530041250) do
+ActiveRecord::Schema.define(version: 20211102042258) do
 
   create_table "guests", force: :cascade do |t|
     t.string   "ip_addr"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20210530041250) do
     t.boolean  "c_plus_plus"
     t.boolean  "qt_creator"
     t.boolean  "qt"
+    t.boolean  "qwidget"
   end
 
 end
