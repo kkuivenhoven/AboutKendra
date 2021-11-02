@@ -14,6 +14,31 @@
 				The web app is hosted <a href=<%= ap[5] %>>here</a>.
 			<% end %>
 		<% if ap[3] == "desktop" %>
+			<% if ap[1] == "Based Paint Program" %>
+				<div class="carouselContainer"> 
+					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<%= image_tag("basedPaintProgram/paintProgram_01.png", :class => "carouselImage") %>
+								<%= image_tag("basedPaintProgram/paintProgram_02.png", :class => "carouselImage") %>
+								<%= image_tag("basedPaintProgram/paintProgram_03.png", :class => "carouselImage") %>
+							</div>
+							<div class="carousel-item">
+								<%= image_tag("basedPaintProgram/paintProgram_04.png", :class => "carouselImage") %>
+                                <%= image_tag("basedPaintProgram/paintProgram_05.png", :class => "carouselImage") %>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+            <% end %>
 			<% if ap[1] == "Text Editor" %>
 				<div class="carouselContainer"> 
 					<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
