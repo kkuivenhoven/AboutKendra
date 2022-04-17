@@ -14,7 +14,8 @@ class BasicController < ApplicationController
 		@portfolio = "My portfolio is below with links to my projects. Developing web apps and doing back-end programming is of my passions, so I am always creating something new. "
 		# @challenge = "I like the challenge of learning a new language. If your company works with a language that is not on my resume, I am ready to work until I know it. "
 		@challenge = "I like the challenge of learning a new language. I find it rewarding."
-		@resume = "<a href='https://docs.google.com/document/d/1hWh5acj5OFcYbxT26l2BewyVcgwnASD_RIBMRfC3Hqk/edit?usp=sharing'>Resume</a>".html_safe
+		# @resume = "<a href='https://docs.google.com/document/d/1hWh5acj5OFcYbxT26l2BewyVcgwnASD_RIBMRfC3Hqk/edit?usp=sharing'>Resume</a>".html_safe
+		@resume = "<a href='https://docs.google.com/document/d/1-AeFGmoKAP2-EiIpSTNait7BqQRWUSxawJAANSoz27A/edit?usp=sharing'>Resume</a>".html_safe
 		@linked_in = "<a href='https://www.linkedin.com/in/kendra-kuivenhoven-4a898237/'>Linked In</a>".html_safe
 		@github = "<a href='https://github.com/kkuivenhoven'>GitHub</a>".html_safe
 		@stackoverflow = "<a href='https://stackoverflow.com/users/story/5479897'>Stackoverflow</a>".html_safe
